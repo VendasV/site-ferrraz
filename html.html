@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LM Imports</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b1220;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+  background-color: #162032;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+img.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+p {
+  font-size: 1rem;
+  margin: 16px 0 24px;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+button.link {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.2s;
+}
+button.link:hover { opacity: 0.9; }
+.catalogo { background-color: #0078d7; }
+.facebook { background-color: #1877f2; }
+.whatsapp { background-color: #25d366; }
+.instagram { background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
+footer { margin-top: 10px; font-size: 0.8rem; opacity: 0.8; }
+
+/* ===== CATÁLOGO ===== */
+.catalogo-container {
+  display: none;
+  background-color: #162032;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.catalogo-container h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+.produto {
+  background-color: #1f2a40;
+  border-radius: 15px;
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.produto:hover { transform: scale(1.03); }
+.produto img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.produto h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 4px 0;
+}
+.produto p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0;
+}
+.btn-voltar {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-top: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+}
+.btn-voltar:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+
+<!-- ===== PÁGINA PRINCIPAL ===== -->
+<div class="container" id="home">
+  <img src="perfil.jpg" alt="LM Imports" class="logo">
+  <h2>LM Imports</h2>
+  <p>🔥 Melhor loja de importados do Cariri! 🛍️ Confira nosso catálogo e descubra produtos incríveis! 📱 Entre em contato e faça seu atendimento de forma rápida!</p>
+
+  <button class="link catalogo" onclick="abrirCatalogo()">🛒 Ver Catálogo</button>
+  <button class="link facebook" onclick="window.open('https://www.facebook.com/profile.php?id=61572507970138','_blank')">Facebook</button>
+  <button class="link whatsapp" onclick="window.open('https://wa.me/558597723541?text=Olá! Gostaria de saber mais sobre os produtos da LM Imports.','_blank')">WhatsApp</button>
+  <button class="link instagram" onclick="window.open('https://www.instagram.com/lm_imports010','_blank')">Instagram</button>
+
+  <footer>© 2025 – FZ Produções | Todos os direitos reservados</footer>
+</div>
+
+<!-- ===== CATÁLOGO ===== -->
+<div class="catalogo-container" id="catalogo">
+  <h2>🛍️ Catálogo de Produtos</h2>
+  <div class="produtos">
+    <div class="produto">
+      <img src="produtos/produto1.png" alt="Robô Aspirador Inteligente K16">
+      <h3>Robô Aspirador Inteligente K16 🔥</h3>
+      <p>79,00</p>
+    </div>
+    <div class="produto">
+      <img src="produtos/produto1.png" alt="Robô Aspirador Inteligente K16">
+      <h3>Robô Aspirador Inteligente K16 🔥</h3>
+      <p>79,00</p>
+    </div>
+    <div class="produto">
+      <img src="produtos/produto1.png" alt="Robô Aspirador Inteligente K16">
+      <h3>Robô Aspirador Inteligente K16 🔥</h3>
+      <p>79,00</p>
+    </div>
+  </div>
+  <button class="btn-voltar" onclick="voltar()">⬅️ Voltar</button>
+</div>
+
+<script>
+function abrirCatalogo() {
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('catalogo').style.display = 'block';
+}
+function voltar() {
+  document.getElementById('catalogo').style.display = 'none';
+  document.getElementById('home').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
